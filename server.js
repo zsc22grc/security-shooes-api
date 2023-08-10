@@ -51,6 +51,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 })
 
-app.listen(port, '172.20.10.3', () => {
-    console.log(`Server running at http://172.20.10.3:${port}`);
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
 });
