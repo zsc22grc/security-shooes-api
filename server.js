@@ -2,10 +2,12 @@ const express = require('express');
 const twilio = require('twilio');
 const app = express();
 const port = 3000;
+require('dotenv').config();
+
 
 // Your Twilio credentials
-const accountSid = 'AC1b8343fc6fe3fed434651d48e0ed9728';
-const authToken = '435397ba790944ed48ef878cfd97eb87';
+const accountSid = process.env.ACCOUNTSID;
+const authToken = process.env.AUTHTOKEN;
 const client = twilio(accountSid, authToken);
 
 app.use(express.json());
